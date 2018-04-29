@@ -1,0 +1,60 @@
+.advantages{
+	background: url("../images/bg/bg2.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction:column;
+	justify-content:center;
+}
+	.advantages__company{
+		@include flex;
+		@include flex-direction(column);
+	}
+		.company__title{
+			text-align: center;
+			font-size:rem(72px);
+			text-transform:uppercase;
+			font-family: 'GagalinRegular';
+			color: #2f3234;
+			margin: 0;
+			margin-bottom: 44px;
+		}
+		.company__differences{
+			@include flex;
+			@include justify-content(space-between);
+			
+		}
+			.difference{
+				width: 33.333%;
+				@include flex;
+				@include flex-grow(1);
+				@include flex-direction(column);
+				padding:8px;
+				margin-right:15px;
+				text-align:center;
+				
+				&:last-child{
+					margin-right:0;
+				}
+			}
+
+				.difference__image{
+					margin-bottom:26px;
+					
+					&:last-child{
+						margin-bottom:28px;
+					}
+				}
+
+				.difference__title{
+					margin:0;
+					font-size:rem(24px);
+					font-family: 'Lifehack_Medium';
+					color:$text_all;
+				}
+				.difference__text{
+					font-size:rem(14px);
+					font-weight: 300;
+					color: #838281;
+					line-height: 1.6;
+				}

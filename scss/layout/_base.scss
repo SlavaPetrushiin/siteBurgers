@@ -1,0 +1,22 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Ubuntu', Arial, sans-serif;
+	line-height: 1.42;
+	position: relative;
+}
+
+body, html {
+	height:100%;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

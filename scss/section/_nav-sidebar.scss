@@ -1,0 +1,35 @@
+.nav_sidebar{
+	position: fixed;
+	left: 90%;
+	top:15%;
+}
+
+.sidebar__site{
+
+}
+.site__item{
+	position: relative;
+	width: 10px;
+	height: 10px;
+	margin-bottom: 15px;
+	background-color: #ffffff;
+	border-radius: 50%;
+	
+	&::after{
+		position: absolute;
+		left:-5px;
+		top:-5px;
+		content: '';
+		display: block;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #ffffff;
+		border-radius: 100%;
+		transition: .5s;
+		opacity: 0;	
+	}
+}
+.site__item:hover::after{
+	opacity: 1;
+}
+
