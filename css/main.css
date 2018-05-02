@@ -13,25 +13,25 @@
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-light/Ubuntu-light.woff2") format("woff2"), url("../fonts/Ubuntu-light/Ubuntu-light.woff") format("woff");
+  src: url("../fonts/Ubuntu/Ubuntu-light/Ubuntu-light.woff2") format("woff2"), url("../fonts/Ubuntu/Ubuntu-light/Ubuntu-light.woff") format("woff");
   font-weight: 300;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-regular/Ubuntu-regular.woff2") format("woff2"), url("../fonts/Ubuntu-regular/Ubuntu-regular.woff") format("woff");
+  src: url("../fonts/Ubuntu/Ubuntu-regular/Ubuntu-regular.woff2") format("woff2"), url("../fonts/Ubuntu/Ubuntu-regular/Ubuntu-regular.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-medium/Ubuntu-medium.woff2") format("woff2"), url("../fonts/Ubuntu-medium/Ubuntu-medium.woff") format("woff");
+  src: url("../fonts/Ubuntu/Ubuntu-medium/Ubuntu-medium.woff2") format("woff2"), url("../fonts/Ubuntu/Ubuntu-medium/Ubuntu-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal; }
 
 @font-face {
   font-family: 'Ubuntu';
-  src: url("../fonts/Ubuntu-b/Ubuntu-b.woff2") format("woff2"), url("../fonts/Ubuntu-b/Ubuntu-b.woff") format("woff");
+  src: url("../fonts/Ubuntu/Ubuntu-b/Ubuntu-b.woff2") format("woff2"), url("../fonts/Ubuntu/Ubuntu-b/Ubuntu-b.woff") format("woff");
   font-weight: 700;
   font-style: normal; }
 
@@ -105,7 +105,7 @@ ul {
   text-decoration: none; }
 
 .first-screen {
-  background: url("../../images/bg/salat_bg.png") no-repeat;
+  background: url("../images/bg/salat_bg.png") no-repeat;
   background-size: cover;
   background-position: center; }
 
@@ -347,6 +347,124 @@ ul {
   color: #838281;
   line-height: 1.6; }
 
+.team {
+  background: url("../images/bg/team.gif") no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #ffffff;
+  font-size: 0.875rem; }
+
+.team__block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  /*border: 1px solid red;*/
+  width: 50%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+.block {
+  /*border: 1px solid green;*/
+  padding: 8px; }
+
+.block__title {
+  color: #f9b43b;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  font-family: 'GagalinRegular';
+  margin-bottom: 25px; }
+
+/*Анимация-------------------------------------------------------*/
+.unit {
+  margin-bottom: 35px; }
+  .unit:last-child {
+    margin-bottom: 0; }
+
+.unit:hover .unit__information {
+  height: 100px; }
+
+.unit:hover .unit__title span img {
+  top: -45px; }
+
+/*---------------------------------------------------------*/
+.unit__title {
+  text-transform: uppercase;
+  font-family: 'GagalinRegular';
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  position: relative;
+  padding-left: 15px;
+  overflow: hidden; }
+
+.unit__title img {
+  position: absolute;
+  left: 0;
+  top: 6px; }
+
+.unit__information {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 0;
+  /*Прячет блок с поворами*/
+  overflow: hidden;
+  margin-left: 10px;
+  margin-top: 10px;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
+
+.unit__foto {
+  width: 100px;
+  height: 100px;
+  /*border: 1px solid red;*/
+  border-radius: 50px;
+  background: url("../images/photos/aphex.gif");
+  background-size: cover;
+  background-position: center;
+  margin-right: 14px; }
+
+.description__title {
+  font-family: 'Ubuntu';
+  font-weight: bold; }
+
+.description__info {
+  font-family: 'Ubuntu';
+  font-weight: 300; }
+
 .comments {
   display: -webkit-flex;
   display: -webkit-box;
@@ -429,7 +547,8 @@ ul {
   height: 10px;
   margin-bottom: 15px;
   background-color: #ffffff;
-  border-radius: 50%; }
+  border-radius: 50%;
+  cursor: pointer; }
   .site__item::after {
     position: absolute;
     left: -5px;

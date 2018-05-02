@@ -8,10 +8,13 @@
 @import 'layout/_adjustment.scss';
 
 
-//
-@import 'section/_first-screen.scss';
-@import 'section/_advantages.scss';
-@import 'section/_comments.scss';
+//основные секции
+@import 'section/_first-screen.scss';//первый экран
+@import 'section/_advantages.scss';//преимущества
+@import 'section/_team.scss';//блок команда
+@import 'section/_comments.scss';//отзывы
+@import 'section/_footer';//отзывы
+
 
 
 @import 'section/_nav-sidebar.scss';
