@@ -9,13 +9,13 @@
 </head>
 <body>
 	<div class="wrapper">
-		<div class="maincontent">
+		<div class="maincontent"><!--Необходим для скрола-->
 			<div class="section first-screen">
 				<div class="container container-first">
 					<header class="header">
 						<div class="header__logo">
 							<a href="#" class="logo__link">
-								<img src="images/logo.svg" alt="logotip" class="logo__image">
+								<img src="images/logo.svg" alt="mr Burger logo" class="logo__image">
 							</a>
 						</div>
 						<ul class="header__menu">
@@ -43,38 +43,57 @@
 						</div>
 					</header>
 					<div class="header__content">
-						<div class="content__left">
-							<img src="images/burgers/hamburger.png" alt="гамбургер" class="content__image">
+						<div class="content__burgers">
+							<img src="images/burgers/hamburger.png" alt="big burger picture" class="content__image">
 						</div>
-						<div class="content__right">
-							<h1 class="content__title">мы делаем<span>натуральные бургеры</span></h1>
+						<div class="content__text">
+							<div class="section__title section__title-yellow">мы  делаем</div>
+							<div class="header__subtitle">натуральные бургеры</div>
 						</div>
 					</div>
 					<div class="arrow">
-						<img src="images/arrow-scroll.svg" alt="стрелка вниз">
+						<a href="#" class="arrow__link"><img src="images/arrow-scroll.svg" alt="стрелка вниз"></a>
 					</div>
 				</div>
 			</div>
 			<div class="section advantages">
 				<div class="container advantages__company">
-					<h2 class="company__title">Мы лучшие</h2>
-					<div class="company__differences">
-						<div class="difference">
-							<img class="difference__image" src="images/meat.svg" alt="meat">
-							<h3 class="difference__title">100% свежее мясо</h3>
-							<p class="difference__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
-						</div>
-						<div class="difference">
-							<img class="difference__image" src="images/hand.svg" alt="meat">
-							<h3 class="difference__title">100% Ручная  сборка</h3>
-							<p class="difference__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
-						</div>
-						<div class="difference">
-							<img class="difference__image" src="images/natural.svg" alt="meat">
-							<h3 class="difference__title">100% Натуральные ингредиенты</h3>
-							<p class="difference__text">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
-						</div>
-					</div>
+					<h2 class="section__title section__title-grey">Мы лучшие</h2>
+					<ul class="company__differences">
+						<li class="difference">
+							<div class="difference__img">
+								<img class="difference__image" src="images/meat.svg" alt="meat">
+							</div>
+							<div class="difference__texts">
+								<div class="difference__title">100% свежее мясо</div>
+								<div class="difference__text">
+									<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</p>
+								</div>
+							</div>
+						</li>
+						<li class="difference">
+							<div class="difference__img">
+								<img class="difference__image" src="images/hand.svg" alt="meat">
+							</div>
+							<div class="difference__texts">
+								<div class="difference__title">100% Ручная  сборка</div>
+								<div class="difference__text">
+									<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</p>
+								</div>
+							</div>
+						</li>
+						<li class="difference">
+							<div class="difference__img">
+								<img class="difference__image" src="images/natural.svg" alt="meat">
+							</div>
+							<div class="difference__texts">
+								<div class="difference__title">100% Натуральные ингредиенты</div>
+								<div class="difference__text">
+									<p>Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
 			<div class="section team">
@@ -83,43 +102,43 @@
 						<div class="block__title">команда</div>
 						<div class="accordeon">
 							<ul class="workers__unit">
-								<li class="unit unit--active">
-									<a href="#" class="unit__title"><span><img src="images/Polygon-1.gif" alt="Polygon"></span>дэниэл редклиф</a>
+								<li class="unit">
+									<a href="#" class="unit__title">дэниэл редклиф</a>
 									<div class="unit__information">
-										<div class="unit__foto"></div>
+										<div class="unit__foto" style="background-image: url('images/photos/aphex.jpg')"></div>
 										<div class="unit__description">
-											<p class="description__title">Оператор</p>
-											<p class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </p>
+											<div class="description__title">Оператор</div>
+											<div class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </div>
 										</div>
 									</div>
 								</li>
-								<li class="unit unit--active">
-									<a href="#" class="unit__title"><span><img src="images/Polygon-1.gif" alt="Polygon"></span>ричард джеймс</a>
-									<div class="unit__information">
-										<div class="unit__foto"></div>
+								<li class="unit">
+									<a href="#" class="unit__title">ричард джеймс</a>
+									<div class="unit__information unit__information-active">
+										<div class="unit__foto" style="background-image: url('images/photos/aphex.jpg')"></div>
 										<div class="unit__description">
-											<p class="description__title">Оператор</p>
-											<p class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </p>
+											<div class="description__title">Оператор</div>
+											<div class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </div>
 										</div>
 									</div>
 								</li>
-								<li class="unit unit--active">
-									<a href="#" class="unit__title"><span><img src="images/Polygon-1.gif" alt="Polygon"></span>Джейк Финн</a>
+								<li class="unit">
+									<a href="#" class="unit__title">Джейк Финн</a>
 									<div class="unit__information">
-										<div class="unit__foto"></div>
+										<div class="unit__foto" style="background-image: url('images/photos/aphex.jpg')"></div>
 										<div class="unit__description">
-											<p class="description__title">Оператор</p>
-											<p class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </p>
+											<div class="description__title">Оператор</div>
+											<div class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </div>
 										</div>
 									</div>
 								</li>
-								<li class="unit unit--active">
-									<a href="#" class="unit__title"><span><img src="images/Polygon-1.gif" alt="Polygon"></span>николай иванов</a>
+								<li class="unit">
+									<a href="#" class="unit__title">николай иванов</a>
 									<div class="unit__information">
-										<div class="unit__foto"></div>
+										<div class="unit__foto" style="background-image: url('images/photos/aphex.jpg')"></div>
 										<div class="unit__description">
-											<p class="description__title">Оператор</p>
-											<p class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </p>
+											<div class="description__title">Оператор</div>
+											<div class="description__info">С радостью поможет подобрать<br> идеальный бургер и оформить<br> заказ. </div>
 										</div>
 									</div>
 								</li>
@@ -128,105 +147,265 @@
 					</div>
 				</div>
 			</div>
+			<div class="section menu">
+				<div class="section__title section__title-white">меню</div>
+				<ul class="nav">
+					<li class="nav__menu">
+						<div class="nav__menu-acco" style="background-image: url('images/menu__foto/for_meat_eaters.jpg')">
+							<a href="#" class="nav__link" >Для мясоедов</a>
+						</div>
+						<div class="nav__text">
+							<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер.</p> <p>Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+							</p>
+						</div>
+					</li>
+					<li class="nav__menu nav__menu-active">
+						<div class="nav__menu-acco" style="background-image: url('images/menu__foto/vegetable.jpg')">
+							<a href="#" class="nav__link" >Вегетарианское</a>
+						</div>
+					<div class="nav__text">
+							<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер.</p> <p>Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+							</p>
+						</div>
+					</li>
+					<li class="nav__menu">
+						<div class="nav__menu-acco" style="background-image: url('images/menu__foto/dietary.jpg')">
+							<a href="#" class="nav__link" >Диетическое</a>
+						</div>
+					<div class="nav__text">
+							<p>Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер.</p> <p>Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+							</p>
+						</div>
+					</li>
+				</ul>
+			</div>
 			<div class="section comments">
-				<div class="comment comment__natasha">
+				<div class="comment comment__foto" style="background-image: url('images/photos/natasha.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">наталья фомина</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
-							<div class="info__btn">
-							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+							<div class="info__author">наталья фомина</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
 							</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="comment comment__pavel">
-					<div class="comment__shadow">
-						<div class="comment__info">
-							<h3 class="info__author">павел гуров</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__luba">
+				<div class="comment comment__foto" style="background-image: url('images/photos/pavel.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">любовь алпатова</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">наталья фомина</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__vlad">
+				<div class="comment comment__foto" style="background-image: url('images/photos/luba.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">влад сташевский</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">люба бокрка</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__ivan">
+				<div class="comment comment__foto" style="background-image: url('images/photos/vlad.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">иван пронин</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">наталья фомина</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__liza">
+				<div class="comment comment__foto" style="background-image: url('images/photos/ivan.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">лиза макарцева</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">иван чайка</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__slava">
+				<div class="comment comment__foto" style="background-image: url('images/photos/liza.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">слава петрухин</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">лиза гагарина</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="comment comment__igor">
+				<div class="comment comment__foto" style="background-image: url('images/photos/slava.jpg')">
 					<div class="comment__shadow">
 						<div class="comment__info">
-							<h3 class="info__author">игорь сухорончак</h3>
-							<p class="info__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.</p>
+							<div class="info__author">славыа фомин</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
 							<div class="info__btn">
-								<a href="#" class="btn btn__information">подробнее</a>
+								<a href="#" class="btn btn__comment">подробнее</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="comment comment__foto" style="background-image: url('images/photos/igor.jpg')">
+					<div class="comment__shadow">
+						<div class="comment__info">
+							<div class="info__author">игорь резник</div>
+							<div class="info__text">
+								<p>Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. </p>
+							</div>
+							<div class="info__btn">
+								<a href="#" class="btn btn__comment">подробнее</a>
 							</div>
 						</div>
 					</div>	
 				</div>
 			</div>
-			<div class="section footer">
-				<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A07fda32a00259ab11415fc9e588507e6e8ec0db4cb687b8502a5d07b71f4961e&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
-				<div class="footer__bootom">
-					<div class="container footer__contacts">
-						
-					</div>
+			<div class="section order">
+				<div class="container order__block">
+					<div class="section__title section__title-yellow">Закажите доставку</div>
+					<form class="order__form-tag" id="order-form">
+						<div class="form__order">
+							<div class="order__col">
+								<div class="order__row">
+									<label class="order__form-block">
+										<div class="order__form-label">Имя</div>
+										<input class="order__form-input" name="name" type="text" placeholder="">
+									</label>
+									<label class="order__form-block">
+										<div class="order__form-label">Телефон</div>
+										<input class="order__form-input phone-mask" name="phone" type="text" placeholder="89160396248">
+									</label>									
+								</div>
+								<div class="order__row">
+									<label class="order__form-block">
+										<div class="order__form-label">Улица</div>
+										<input class="order__form-input" name="name" type="text" placeholder="">
+									</label>
+								</div>
+								<div class="order__row">
+									<label class="order__form-block">
+										<div class="order__form-label">Дом</div>
+										<input class="order__form-input" name="home" type="text" placeholder="">
+									</label>
+									<label class="order__form-block">
+										<div class="order__form-label">Корпус</div>
+										<input class="order__form-input" name="part" type="text" placeholder="">
+									</label>
+									<label class="order__form-block">
+										<div class="order__form-label">Квартира</div>
+										<input class="order__form-input" name="appt" type="text" placeholder="">
+									</label>
+									<label class="order__form-block">
+										<div class="order__form-label">Этаж</div>
+										<input class="order__form-input" name="floor" type="text" placeholder="">
+									</label>
+								</div>
+							</div>
+							<div class="order__col">
+								<div class="order__row">
+									<label class="order__form-block">
+										<div class="order__form-label">Комментарий</div>
+										<textarea class="order__form-input order__form-textarea" ></textarea>
+									</label>
+								</div>
+								<div class="order__row">
+									<label class="order__form-block">
+										<input type="radio" class="order__form-radio" name="pay">
+										<div class="order__radio">Потребуется сдача</div>
+									</label>
+									<label class="order__form-block">
+										<input type="radio" class="order__form-radio" name="pay">
+										<div class="order__radio">Оплата по карте</div>
+									</label>									
+								</div>
+								<div class="order__row">
+									<label class="order__form-block">
+										<input class="order__form-checkbox"  type="checkbox" name="callback">
+										<div class="order__form-check">Не перезванивать</div>
+									</label>									
+								</div>
+								<div class="order-button">
+									<div class="order__btn">
+										<input type="submit" class="btn__input" value="Заказать">
+									</div>
+									<div class="order__btn">
+										<input type="submit" class="btn__input btn__input_reset" value="Очистить">
+									</div>
+								</div>
+							</div>
+						</div>
+					</form>
 				</div>
+			</div>
+			<div class="section footer">
+				<div class="yandex-map" id="map"></div>
+				<footer class="footer__information">
+					<div class="container footer__contacts">
+						<div class="contacts__text">
+							<div class="text__adress">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+							<div class="text__phone">
+								<a class="nomber__phone" href="tel:+78123771377"><span><img src="images/phone.svg" alt="phone"></span>+7 (812) 377-13-77</a>
+							</div>
+						</div>
+						<div class="social__network">
+							<ul class="social">
+								<li class="socials__item">
+									<a href="socials__link">
+										<svg class="socials__link-icon" width="20" height="20">
+										  <use xlink:href="images/sprite/sprite.svg#vk"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="socials__link">
+										<svg class="socials__link-icon" width="20" height="20">
+										  <use xlink:href="images/sprite/sprite.svg#twitter"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="socials__link">
+										<svg class="socials__link-icon" width="20" height="20">
+										  <use xlink:href="images/sprite/sprite.svg#inst"></use>
+										</svg>
+									</a>
+								</li>
+								<li class="socials__item">
+									<a href="socials__link">
+										<svg class="socials__link-icon" width="20" height="20">
+										  <use xlink:href="images/sprite/sprite.svg#fb"></use>
+										</svg>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</footer>
 			</div>		
 		</div>
 	</div>
@@ -259,6 +438,6 @@
 			<li class="site__item">
 			</li>
 		</ul>
-	</div>
+	</div><!--переименовать в fixed-menu-->
 </body>
 </html>

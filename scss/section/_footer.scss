@@ -1,0 +1,78 @@
+.footer{
+	position: relative;
+}
+	.yandex-map{
+		background: url("../images/bg/map.jpg") center center / cover no-repeat; 
+		max-width: 100%;
+		height: 100%;
+		width: 100%;
+	}
+	.footer__information{
+		position: absolute;
+		height: rem(80px);
+		left:0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0,0,0,0.95);
+	}
+		.footer__contacts{
+			@include flex;
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			@include  align-items(stretch);
+			margin-top: rem(15px);
+		}
+			.contacts__text{
+				border: 1px solid pink;
+				width: 50%;
+				font-size: rem(14px);
+				color:$text_color;
+			}
+				.text__adress{
+					font-weight: 300;
+					margin-bottom: rem(8px);
+				}
+				.text__phone{
+					
+				}
+					.nomber__phone{
+						color:$red;
+						text-decoration: none;
+						font-weight: bold;
+						display: block;
+						transition: .5s;
+						
+						&:hover{
+							color:$btn_hover;
+						}
+					}
+						.nomber__phone span{
+							display: inline-block;	
+							padding-right: rem(15px);
+							}
+
+			.social__network{
+				width: 50%;
+				border: 1px solid yellow;
+
+			}
+				.social{
+					@include flex;
+					@include justify-content(flex-end);
+					height: 100%;
+				}
+					.socials__item{
+						margin-left: rem(18px);
+						@include  align-self(center);
+					}
+					.socials__link{
+
+					}
+						.socials__link-icon{
+							fill: $text_color;
+							transition: .5s;
+							
+							&:hover{
+								fill: $red;
+							}
+						}

@@ -9,11 +9,14 @@
 
 
 //основные секции
+@import 'section/_btn-and-section_title.scss';//общие стили для кнопки и загловков
 @import 'section/_first-screen.scss';//первый экран
 @import 'section/_advantages.scss';//преимущества
 @import 'section/_team.scss';//блок команда
+@import 'section/_menu.scss';//блок команда
 @import 'section/_comments.scss';//отзывы
-@import 'section/_footer';//отзывы
+@import 'section/_order';//доставка
+@import 'section/_footer';
 
 
 

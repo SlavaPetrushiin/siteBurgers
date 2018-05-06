@@ -1,0 +1,110 @@
+.order{
+	position: relative;
+	background: url("../images/bg/fon_input.jpg") center center / cover no-repeat;
+	@include flex;
+	@include flex-direction(column);
+	@include justify-content(center);
+}
+	.order__block{
+		@include flex;
+		@include flex-direction(column);
+	}
+		.section__title-yellow{
+			text-align: center;
+			width: 100%;
+				
+		}
+		.order__form-tag{
+			width: 100%;
+		}
+			.form__order{
+				@include flex;
+			}
+				.order__col{
+					@include flex-grow(1); 
+					width: 45%;
+					color:$text_color;
+					padding: 1%;
+					margin-right: rem(15px);
+					
+					&:last-child{
+						margin-right: 0;
+					}
+				}
+					.order__row{
+						margin-bottom: rem(16px);
+						@include flex;
+					}
+						.order__form-block{
+							margin-left: rem(10px);
+							position: relative;
+							font-size: rem(14px);
+							font-weight: 300;
+							
+							&:first-child{
+								margin-left: 0;
+							}
+						}
+							.order__form-label{
+								cursor: pointer;
+								margin-bottom: rem(5px);
+							}
+								.order__form-input {
+									font-weight: 300;
+									font-size: rem(14px);
+									padding: rem(8px) rem(20px);
+									width: 100%;
+									border:none;
+									border: 1px solid #d1cfcb;
+									border-radius: rem(5px);
+									transition: .5s;
+								}
+
+.order__form-block{
+	width: 100%;
+}
+.order__form-textarea{
+	height: rem(110px);
+	resize: none;
+
+}
+.order__form-radio{
+	position: absolute;
+	bottom: rem(3px);
+}
+.order__radio{
+	display: inline-block;
+	margin-left: rem(20px);
+}
+.order__form-checkbox{
+	position: absolute;
+	bottom: rem(3px);
+}
+.order__form-check{
+	margin-left: rem(20px);
+}
+
+.order-button{
+	@include flex;
+	
+}
+.order__btn{
+	margin-right: rem(10px);
+}
+.btn__input{
+	color: $text_color;
+	min-width: rem(100px);
+	display: inline-block;	
+	border-radius: 7px;
+	padding: rem(12px) rem(16px);
+	text-transform: uppercase;
+	cursor: pointer;
+	background: $red;
+	border:none;
+	font-size: rem(14px);
+	font-weight: 300;
+}
+.btn__input_reset{
+	text-transform: none;
+	background: transparent;
+}

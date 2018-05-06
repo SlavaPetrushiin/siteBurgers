@@ -1,6 +1,5 @@
 .team {
-  background: url("../images/bg/team.gif") no-repeat;
-  background-size: cover;
+  background: url("../images/bg/team.jpg") center center / cover no-repeat;
   position: relative;
   color: $text_color;
   font-size: 0.875rem; }
@@ -9,6 +8,7 @@
 	  position: absolute;
 	  top: 0;
 	  right: 0;
+	  bottom: 0;
 	  /*border: 1px solid red;*/
 	  width: 50%;
 	  height: 100%;
@@ -17,81 +17,101 @@
 	  @include  align-items(center);
 	  @include justify-content(center);
 	  @include flex-wrap(nowrap);
+	  background: rgba(#2f3234, 0.80);
 	}
 
 		.block {
 		 /*border: 1px solid green;*/
-		 padding: 8px; }
+		 padding: rem(8px); }
 
 			.block__title {
 				color: #f9b43b;
 				font-size: 4.5rem;
 				text-transform: uppercase;
 				font-family: 'GagalinRegular'; 
-				margin-bottom: 25px;
+				margin-bottom: rem(25px);
 			}
 			.accordeon{
 
 			}
-/*Анимация-------------------------------------------------------*/
-				.unit{
-					margin-bottom: 35px;
-					
-
-					&:last-child{
-						margin-bottom: 0;
-					}
-				}
-				.unit:hover .unit__information {
-					height: 100px;
+				.workers__unit{
 
 				}
-.unit:hover .unit__title span img{
-	top:-45px;
-}
-/*---------------------------------------------------------*/
-
-					.unit__title {
-						text-transform: uppercase;
-						font-family: 'GagalinRegular';
-						text-decoration: none;
-						color:$text_color;
-						display: block;
-						position: relative;
-						padding-left: 15px;
-						overflow: hidden;
+					.unit{
+						margin-bottom: rem(23px);
 					}
-						.unit__title img{
-							position: absolute;
-							left:0;
-							top: 6px;
-						}
 
-						.unit__information {
-							@include flex;
-							@include  align-items(center);
-							height: 0;/*Прячет блок с поворами*/
-							overflow: hidden;
-							margin-left: 10px;
-							margin-top: 10px;
-							transition: all 1s;//TIME-----------------
-						}
-
-							.unit__foto {
-							  width: 100px;
-							  height: 100px;
-							  /*border: 1px solid red;*/
-							  border-radius: 50px;
-							  background: url("../images/photos/aphex.gif");
-							  background-size: cover;
-							  background-position: center;
-							  margin-right: 14px; }
-
-							.description__title {
-							  font-family: 'Ubuntu';
-							  font-weight: bold; }
-
-							.description__info {
-							  font-family: 'Ubuntu';
-							  font-weight: 300; 
+						.unit__title {
+							text-transform: uppercase;
+							font-family: 'GagalinRegular';
+							text-decoration: none;
+							color:$text_color;
+							display: block;
+							position: relative;
+							padding-left: rem(15px);
+							transition: all easy .5s;
+							
+							&:hover{
+								color:$orange;
 							}
+
+
+								&:before, &:after {
+									content: "";
+									display: block;
+									position: absolute;
+									left: rem(-18px);
+									top: rem(5px);
+									width: 0;
+									height: 0;
+								}
+
+								&:before {
+									border-top: rem(7px) solid $orange;
+									border-left: rem(5px) solid transparent;
+									border-right: rem(5px) solid transparent;
+									border-bottom: rem(0px) solid transparent;
+									transform: rotate(0deg);
+									transition: .3s;
+								}
+
+								&:after {
+									display: none;
+									border-bottom: rem(7px) solid $orange;
+									border-left: rem(5px) solid transparent;
+									border-right: rem(5px) solid transparent;
+									border-top: rem(0px) solid transparent;
+								}
+
+							}
+							.unit__information {
+								@include flex;
+								@include  align-items(center);
+								height: 0;/*Прячет блок с поворами*/
+								overflow: hidden;
+								margin-left: rem(10px);
+								margin-top: rem(10px);
+								transition: all 1s;//TIME-----------------
+							}
+								.unit__information-active{
+									height: auto;
+								}
+
+								.unit__foto {
+								  width: rem(100px);
+								  height: rem(100px);
+								  /*border: 1px solid red;*/
+								  border-radius: rem(50px);
+								  background-size: cover;
+								  background-position: center;
+								  margin-right: rem(14px); }
+
+								.description__title {
+								  font-family: 'Ubuntu';
+								  font-weight: bold; }
+
+								.description__info {
+								  font-family: 'Ubuntu';
+								  font-weight: 300; 
+								}
+

@@ -1,7 +1,5 @@
 .first-screen{
-	background: url('../images/bg/salat_bg.png') no-repeat;
-	background-size: cover;
-	background-position: center;
+	background: url('../images/bg/salat_bg.jpg') center center / cover no-repeat;
 }
 	.container-first{
 		height: 100%;
@@ -16,24 +14,28 @@
 		@include flex;
 		@include justify-content(space-between);
 		@include  align-items(center);
-		padding: 20px;
-	}
+		padding-top: rem(10px);
+		}
 		.header__logo{
 			margin-right: auto;
 		}
+			.logo__image{
+
+			}
 		.header__menu{
 			@include flex;
+			@include flex-wrap(wrap);
 			list-style-type: none;
 		}
 			.menu__item{
-				margin-right: 15px;
+				margin-right: rem(10px);
 				
 				&::before{
 					display: inline-block;
 					vertical-align: middle;
 					color: $text_color; /* Цвет маркера */
 					content: "\2022 "; /* Сам маркер */
-					padding-right: 12px;
+					padding-right: rem(10px);
 				}
 				&:hover{
 					color:$red;
@@ -48,7 +50,7 @@
 					text-decoration: none;
 					text-transform: uppercase;
 					color:$text_color;
-					font-size: 13px;
+					font-size: rem(13px);
 				}
 
 				.menu__link:hover{
@@ -67,32 +69,34 @@
 		@include flex-grow(1);
 		@include justify-content(space-between);
 		@include  align-items(center);
+		margin-bottom: rem(5px);
 	}
-	.content__left{
-
+	.content__burgers{
+		@include flex-grow(1);
 	}
-	.content__right{
-		margin-left: 15px;
-		margin-top: 60px;
-	}
-		.content__title{
-			font-size: rem(72px);
-			color: $orange;
-			text-transform: uppercase;
-			font-family: 'GagalinRegular';
-			margin: 0;
-			line-height: 1;
+		.content__image{
+			max-width: 100%;
 			
-			& span{
-				font-size: rem(65px);
-				color: $text_color;
-				font-family: 'Lifehack_Medium';
-				text-transform: lowercase;
-				display: inline-block;
-				margin-top: rem(45px);
-			}
 		}
-
+	.content__text{
+		margin-left: rem(20px);
+		margin-top: rem(60px);
+		@include flex-grow(1);
+	}
+		.section__title-yellow{
+			color: $orange;
+			margin-bottom: rem(30px);
+		}
+			
+		.header__subtitle{
+			font-size: rem(65px);
+			color: $text_color;
+			font-family: 'Lifehack_Medium';
+			text-transform: lowercase;
+			display: inline-block;
+			margin-top: 0;
+			line-height: 1;
+		}
 	.arrow{
 		@include flex;
 		@include justify-content(center);

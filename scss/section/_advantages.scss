@@ -1,48 +1,36 @@
 .advantages{
-	background: url("../images/bg/bg2.png") no-repeat;
-	background-position: center;
-	background-size: cover;
-	display: flex;
-	flex-direction:column;
-	justify-content:center;
+	background: url("../images/bg/bg2.jpg") center center / cover no-repeat;
+	@include flex;
+	@include flex-direction(column);
+	@include justify-content(center);
 }
 	.advantages__company{
 		@include flex;
 		@include flex-direction(column);
 	}
-		.company__title{
+		.section__title-grey{
 			text-align: center;
-			font-size:rem(72px);
-			text-transform:uppercase;
-			font-family: 'GagalinRegular';
 			color: #2f3234;
-			margin: 0;
-			margin-bottom: 44px;
+			margin-bottom: rem(44px);
 		}
 		.company__differences{
 			@include flex;
 			@include justify-content(space-between);
-			
 		}
 			.difference{
 				width: 33.333%;
 				@include flex;
-				@include flex-grow(1);
 				@include flex-direction(column);
-				padding:8px;
-				margin-right:15px;
+				margin-bottom: rem(50px);
+				padding: 0 rem(15px);
 				text-align:center;
-				
-				&:last-child{
-					margin-right:0;
-				}
 			}
 
 				.difference__image{
-					margin-bottom:26px;
+					margin-bottom:rem(26px);
 					
 					&:last-child{
-						margin-bottom:28px;
+						margin-bottom:rem(28px);
 					}
 				}
 

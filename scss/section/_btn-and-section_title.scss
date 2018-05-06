@@ -1,0 +1,20 @@
+@import '../config/_variables.scss';
+@import '../config/_mixins.scss';
+//кнопка
+.btn {
+	color: #ffffff;
+	min-width: rem(100px);
+	display: inline-block;	
+	border-radius: 7px;
+	padding: rem(12px) rem(16px);
+	text-transform: uppercase;
+	text-decoration: none;
+}
+//заголовок
+.section__title{
+	font-size: rem(72px);
+	text-transform: uppercase;
+	font-family: 'GagalinRegular';
+	margin: 0;
+	line-height: 1;
+}
