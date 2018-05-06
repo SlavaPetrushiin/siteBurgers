@@ -2,6 +2,10 @@
 	position: fixed;
 	left: 90%;
 	top:15%;
+	
+		@include tablets() {
+			display: none;
+		}
 }
 
 .sidebar__site{

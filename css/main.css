@@ -239,6 +239,14 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   margin-bottom: 0.3125rem; }
+  @media screen and (max-width: 768px) {
+    .header__content {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column; } }
 
 .content__burgers {
   -webkit-flex-grow: 1;
@@ -409,6 +417,9 @@ ul {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   background: rgba(47, 50, 52, 0.8); }
+  @media screen and (max-width: 768px) {
+    .team__block {
+      width: 100%; } }
 
 .block {
   /*border: 1px solid green;*/
@@ -420,6 +431,10 @@ ul {
   text-transform: uppercase;
   font-family: 'GagalinRegular';
   margin-bottom: 1.5625rem; }
+
+@media screen and (max-width: 768px) {
+  .workers__unit {
+    text-align: center; } }
 
 .unit {
   margin-bottom: 1.4375rem; }
@@ -445,6 +460,9 @@ ul {
     top: 0.3125rem;
     width: 0;
     height: 0; }
+    @media screen and (max-width: 768px) {
+      .unit__title:before, .unit__title:after {
+        left: 4.8125rem; } }
   .unit__title:before {
     border-top: 0.4375rem solid #f9b43b;
     border-left: 0.3125rem solid transparent;
@@ -482,6 +500,14 @@ ul {
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s; }
+  @media screen and (max-width: 768px) {
+    .unit__information {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column; } }
 
 .unit__information-active {
   height: auto; }
@@ -493,11 +519,16 @@ ul {
   border-radius: 3.125rem;
   background-size: cover;
   background-position: center;
-  margin-right: 0.875rem; }
+  margin-right: 0.875rem;
+  margin-bottom: 0.875rem; }
+  @media screen and (max-width: 768px) {
+    .unit__foto {
+      margin-right: 0; } }
 
 .description__title {
   font-family: 'Ubuntu';
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 0.875rem; }
 
 .description__info {
   font-family: 'Ubuntu';
@@ -551,9 +582,9 @@ ul {
   position: absolute;
   bottom: 0;
   left: 50%;
-  -webkit-transform: rotate(-90deg) translateY(-50%);
+  -webkit-transform: rotateZ(-90deg) translateY(-50%);
   -ms-transform: rotate(-90deg) translateY(-50%);
-  transform: rotate(-90deg) translateY(-50%);
+  transform: rotateZ(-90deg) translateY(-50%);
   -webkit-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
   transform-origin: 0 0; }
@@ -589,6 +620,10 @@ ul {
   width: 25%;
   height: 50%;
   position: relative; }
+  @media screen and (max-width: 768px) {
+    .comment {
+      width: 50%;
+      height: 25%; } }
 
 .comment__shadow {
   background-color: rgba(0, 0, 0, 0.65);
@@ -664,6 +699,9 @@ ul {
 .section__title-yellow {
   text-align: center;
   width: 100%; }
+  @media screen and (max-width: 768px) {
+    .section__title-yellow {
+      white-space: nowrap; } }
 
 .order__form-tag {
   width: 100%; }
@@ -673,6 +711,20 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .form__order {
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      -ms-flex-direction: column;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-align-items: center;
+      -moz-align-items: center;
+      -ms-align-items: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .order__col {
   -webkit-flex-grow: 1;
@@ -687,6 +739,10 @@ ul {
   margin-right: 0.9375rem; }
   .order__col:last-child {
     margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    .order__col {
+      width: 95%;
+      margin-right: 0; } }
 
 .order__row {
   margin-bottom: 1rem;
@@ -871,6 +927,9 @@ ul {
   position: fixed;
   left: 90%;
   top: 15%; }
+  @media screen and (max-width: 768px) {
+    .nav_sidebar {
+      display: none; } }
 
 .site__item {
   position: relative;

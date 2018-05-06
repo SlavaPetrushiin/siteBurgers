@@ -18,6 +18,10 @@
 	  @include justify-content(center);
 	  @include flex-wrap(nowrap);
 	  background: rgba(#2f3234, 0.80);
+		
+		@include tablets() {
+				width: 100%;
+			}
 	}
 
 		.block {
@@ -35,7 +39,9 @@
 
 			}
 				.workers__unit{
-
+					@include tablets() {
+						text-align: center;
+					}
 				}
 					.unit{
 						margin-bottom: rem(23px);
@@ -64,6 +70,10 @@
 									top: rem(5px);
 									width: 0;
 									height: 0;
+									
+									@include tablets() {
+										left: rem(77px);
+									}
 								}
 
 								&:before {
@@ -92,23 +102,34 @@
 								margin-left: rem(10px);
 								margin-top: rem(10px);
 								transition: all 1s;//TIME-----------------
+								
+									@include tablets() {
+										@include flex-direction(column);
+									}
 							}
 								.unit__information-active{
 									height: auto;
 								}
 
 								.unit__foto {
-								  width: rem(100px);
-								  height: rem(100px);
-								  /*border: 1px solid red;*/
-								  border-radius: rem(50px);
-								  background-size: cover;
-								  background-position: center;
-								  margin-right: rem(14px); }
+									 width: rem(100px);
+									 height: rem(100px);
+									  /*border: 1px solid red;*/
+									 border-radius: rem(50px);
+									 background-size: cover;
+									 background-position: center;
+									 margin-right: rem(14px); 
+									 margin-bottom: rem(14px);
+									
+									@include tablets() {
+										 margin-right: 0; 
+									}
+								}
 
 								.description__title {
 								  font-family: 'Ubuntu';
-								  font-weight: bold; }
+								  font-weight: bold; 
+							      margin-bottom: rem(14px);	}
 
 								.description__info {
 								  font-family: 'Ubuntu';

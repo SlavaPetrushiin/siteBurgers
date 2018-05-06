@@ -70,13 +70,16 @@
 		@include justify-content(space-between);
 		@include  align-items(center);
 		margin-bottom: rem(5px);
+		
+		@include tablets() {
+			@include flex-direction(column);
+		}
 	}
 	.content__burgers{
 		@include flex-grow(1);
 	}
 		.content__image{
 			max-width: 100%;
-			
 		}
 	.content__text{
 		margin-left: rem(20px);

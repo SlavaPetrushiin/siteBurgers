@@ -12,13 +12,22 @@
 		.section__title-yellow{
 			text-align: center;
 			width: 100%;
-				
+			
+			@include tablets() {
+				white-space: nowrap;
+			}
 		}
+
 		.order__form-tag{
 			width: 100%;
 		}
 			.form__order{
 				@include flex;
+				
+				@include tablets() {
+					@include flex-direction(column);
+					@include align-items(center);
+				}
 			}
 				.order__col{
 					@include flex-grow(1); 
@@ -30,6 +39,10 @@
 					&:last-child{
 						margin-right: 0;
 					}
+						@include tablets() {
+							width: 95%;
+							margin-right: 0;
+						}
 				}
 					.order__row{
 						margin-bottom: rem(16px);
