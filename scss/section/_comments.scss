@@ -10,7 +10,7 @@
 			
 			@include tablets() {
 				width:50%;
-				height:25%;
+				height: rem(257px);
 			}
 		}
 		.comment__shadow{
@@ -36,15 +36,33 @@
 					&:hover{
 						opacity: 1;
 					}
+					@include tablets() {
+						padding: 6% 3%;
+						text-align: center;
+					}
+					@include phones() {
+						@include flex;
+						@include flex-direction(column);
+						@include justify-content(center);
+					}
 				}
 					.info__author{
 						font-family: 'GagalinRegular';
 						text-transform: uppercase;
 						letter-spacing: 1.5px;
+						
+						@include phones() {
+							font-size: rem(24px);
+							margin-bottom: rem(15px);
+						}
 					}
 					.info__text{
 						line-height: 1.8;
 						font-weight: 300;
+						
+						@include phones() {
+							display: none;
+						}
 					}
 						.btn__comment{
 							background-color: #2f3234;

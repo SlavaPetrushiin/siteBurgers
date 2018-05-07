@@ -1,5 +1,9 @@
 .footer{
 	position: relative;
+	
+	@include tablets() {
+		height: rem(650px);
+	}
 }
 	.yandex-map{
 		background: url("../images/bg/map.jpg") center center / cover no-repeat; 
@@ -9,11 +13,12 @@
 	}
 	.footer__information{
 		position: absolute;
-		height: rem(80px);
+		height: rem(120px);
 		left:0;
 		bottom: 0;
 		right: 0;
 		background-color: rgba(0,0,0,0.95);
+		padding: rem(10px) 0;
 	}
 		.footer__contacts{
 			@include flex;
@@ -21,12 +26,23 @@
 			@include justify-content(space-between);
 			@include  align-items(stretch);
 			margin-top: rem(15px);
+
+			
+			@include phones() {
+				@include flex-direction(column);
+				@include justify-content(center);
+			}
 		}
 			.contacts__text{
 				border: 1px solid pink;
 				width: 50%;
 				font-size: rem(14px);
 				color:$text_color;
+				
+				@include phones() {
+					width: 100%;
+					text-align: center;
+				}
 			}
 				.text__adress{
 					font-weight: 300;
@@ -54,12 +70,19 @@
 			.social__network{
 				width: 50%;
 				border: 1px solid yellow;
-
+				
+				@include phones() {
+					width: 100%;
+				}
 			}
 				.social{
 					@include flex;
 					@include justify-content(flex-end);
 					height: 100%;
+					
+					@include phones() {
+						@include justify-content(center);;
+					}
 				}
 					.socials__item{
 						margin-left: rem(18px);

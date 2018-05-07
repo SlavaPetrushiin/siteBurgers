@@ -89,6 +89,10 @@
 		.section__title-yellow{
 			color: $orange;
 			margin-bottom: rem(30px);
+			
+			@include tablets() {
+				margin-bottom: rem(20px);
+			}
 		}
 			
 		.header__subtitle{
@@ -99,6 +103,13 @@
 			display: inline-block;
 			margin-top: 0;
 			line-height: 1;
+			
+			@include tablets() {
+				text-align: center;
+			}
+			@include phones() {
+				font-size: rem(52px);
+			}
 		}
 	.arrow{
 		@include flex;

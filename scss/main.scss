@@ -2,13 +2,14 @@
 @import 'config/_variables.scss';
 @import 'config/_mixins.scss';
 
+
+// media
+@import 'section/_media';
+
 //layout
 @import 'layout/_fonts.scss';
 @import 'layout/_base.scss';
 @import 'layout/_adjustment.scss';
-
-// media
-@import 'section/_media';
 
 //основные секции
 @import 'section/_btn-and-section_title.scss';//общие стили для кнопки и загловков

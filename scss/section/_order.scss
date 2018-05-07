@@ -8,14 +8,12 @@
 	.order__block{
 		@include flex;
 		@include flex-direction(column);
+		padding-top:rem(10px); 
+		padding-bottom:rem(10px); 
 	}
 		.section__title-yellow{
 			text-align: center;
 			width: 100%;
-			
-			@include tablets() {
-				white-space: nowrap;
-			}
 		}
 
 		.order__form-tag{

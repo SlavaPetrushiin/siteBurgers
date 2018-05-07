@@ -12,10 +12,15 @@
 			text-align: center;
 			color: #2f3234;
 			margin-bottom: rem(44px);
+			margin-top: rem(10px);
 		}
 		.company__differences{
 			@include flex;
 			@include justify-content(space-between);
+		
+			@include phones() {
+				@include flex-direction(column);
+			}
 		}
 			.difference{
 				width: 33.333%;
@@ -24,8 +29,14 @@
 				margin-bottom: rem(50px);
 				padding: 0 rem(15px);
 				text-align:center;
+				
+				@include phones() {
+					@include flex-direction(row);
+					width: 100%;
+					text-align:left;
+					margin-bottom: rem(25px);
+				}				
 			}
-
 				.difference__image{
 					margin-bottom:rem(26px);
 					
@@ -33,16 +44,24 @@
 						margin-bottom:rem(28px);
 					}
 				}
+				.difference__texts{
+					@include phones() {
+						margin-left:rem(15px);
+					}
+				}
+					.difference__title{
+						margin:0;
+						font-size:rem(24px);
+						font-family: 'Lifehack_Medium';
+						color:$text_all;
+					}
+					.difference__text{
+						font-size:rem(14px);
+						font-weight: 300;
+						color: #838281;
+						line-height: 1.6;
+					}
 
-				.difference__title{
-					margin:0;
-					font-size:rem(24px);
-					font-family: 'Lifehack_Medium';
-					color:$text_all;
-				}
-				.difference__text{
-					font-size:rem(14px);
-					font-weight: 300;
-					color: #838281;
-					line-height: 1.6;
-				}
+
+
+
