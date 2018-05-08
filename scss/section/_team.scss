@@ -30,9 +30,6 @@
 
 			.block__title {
 				color: #f9b43b;
-				font-size: 4.5rem;
-				text-transform: uppercase;
-				font-family: 'GagalinRegular'; 
 				margin-bottom: rem(25px);
 			}
 			.accordeon{
@@ -72,7 +69,10 @@
 									height: 0;
 									
 									@include tablets() {
-										left: rem(77px);
+										left: rem(20px);
+									}
+									@include phones() {
+										font-size: rem(18px);
 									}
 								}
 

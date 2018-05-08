@@ -11,6 +11,7 @@
 			@include tablets() {
 				width:50%;
 				height: rem(257px);
+				overflow: hidden;
 			}
 		}
 		.comment__shadow{
@@ -40,7 +41,7 @@
 						padding: 6% 3%;
 						text-align: center;
 					}
-					@include phones() {
+					@include phones-comments() {
 						@include flex;
 						@include flex-direction(column);
 						@include justify-content(center);
@@ -51,7 +52,7 @@
 						text-transform: uppercase;
 						letter-spacing: 1.5px;
 						
-						@include phones() {
+						@include phones-comments() {
 							font-size: rem(24px);
 							margin-bottom: rem(15px);
 						}
@@ -60,7 +61,7 @@
 						line-height: 1.8;
 						font-weight: 300;
 						
-						@include phones() {
+						@include phones-comments() {
 							display: none;
 						}
 					}

@@ -12,3 +12,9 @@
     @content;
   }
 }
+
+@mixin phones-comments {
+  @media screen and (max-width: $phones-comments) {
+    @content;
+  }
+}

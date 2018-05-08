@@ -71,7 +71,8 @@ ul {
   min-height: 40.625rem; }
   @media screen and (max-width: 768px) {
     .section {
-      height: auto; } }
+      height: auto;
+      overflow: hidden; } }
 
 .container {
   margin: 0 auto;
@@ -119,7 +120,7 @@ ul {
   line-height: 1; }
   @media screen and (max-width: 480px) {
     .section__title {
-      font-size: 3.875rem; } }
+      font-size: 3.125rem; } }
 
 .first-screen {
   background: url("../images/bg/salat_bg.jpg") center center/cover no-repeat; }
@@ -466,9 +467,6 @@ ul {
 
 .block__title {
   color: #f9b43b;
-  font-size: 4.5rem;
-  text-transform: uppercase;
-  font-family: 'GagalinRegular';
   margin-bottom: 1.5625rem; }
 
 @media screen and (max-width: 768px) {
@@ -501,7 +499,10 @@ ul {
     height: 0; }
     @media screen and (max-width: 768px) {
       .unit__title:before, .unit__title:after {
-        left: 4.8125rem; } }
+        left: 1.25rem; } }
+    @media screen and (max-width: 480px) {
+      .unit__title:before, .unit__title:after {
+        font-size: 1.125rem; } }
   .unit__title:before {
     border-top: 0.4375rem solid #f9b43b;
     border-left: 0.3125rem solid transparent;
@@ -662,7 +663,8 @@ ul {
   @media screen and (max-width: 768px) {
     .comment {
       width: 50%;
-      height: 16.0625rem; } }
+      height: 16.0625rem;
+      overflow: hidden; } }
 
 .comment__shadow {
   background-color: rgba(0, 0, 0, 0.65);
@@ -691,7 +693,7 @@ ul {
     .comment__info {
       padding: 6% 3%;
       text-align: center; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 545px) {
     .comment__info {
       display: -webkit-flex;
       display: -webkit-box;
@@ -714,7 +716,7 @@ ul {
   font-family: 'GagalinRegular';
   text-transform: uppercase;
   letter-spacing: 1.5px; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 545px) {
     .info__author {
       font-size: 1.5rem;
       margin-bottom: 0.9375rem; } }
@@ -722,7 +724,7 @@ ul {
 .info__text {
   line-height: 1.8;
   font-weight: 300; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 545px) {
     .info__text {
       display: none; } }
 
