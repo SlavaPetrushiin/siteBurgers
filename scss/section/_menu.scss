@@ -60,6 +60,10 @@
 					font-weight: 300;
 					font-size: rem(14px);
 					padding: rem(60px) rem(30px);
+					
+					@include phones-comments() {
+						overflow-y: scroll;
+					}
 				}
 					.nav__text p{
 						margin: 0;

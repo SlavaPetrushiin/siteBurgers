@@ -641,6 +641,9 @@ ul {
   font-weight: 300;
   font-size: 0.875rem;
   padding: 3.75rem 1.875rem; }
+  @media screen and (max-width: 545px) {
+    .nav__text {
+      overflow-y: scroll; } }
 
 .nav__text p {
   margin: 0; }
