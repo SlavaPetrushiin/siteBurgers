@@ -19,7 +19,8 @@
 	}
 		.slaider__befor{
 			position: absolute;
-			top:44%;
+			top:50%;
+			transform: translateY(-50%);
 			left:0;
 			
 			@include tablets() {
@@ -32,7 +33,8 @@
 			}
 		.slaider__after{
 			position: absolute;
-			top:44%;
+			top:50%;
+			transform: translateY(-50%);
 			right:0;
 			
 			@include tablets() {
@@ -60,13 +62,19 @@
 			.image__burger{
 				text-align: center;
 				width: rem(505px);
-				max-width: 100%;
+				max-width: 98%;
 			}
 			.menu__burgers{
 				position: absolute;
 				top:0;
 				left: rem(20px);
-				/*border: 1px solid red;*/
+				width: rem(90px);
+				height: rem(90px);
+				background: #f08c33;
+				border-radius: rem(4px);
+				@include flex;
+				@include align-items(center);
+				@include justify-content(center);
 			}
 				.burger__link{
 					display: block;
@@ -88,6 +96,13 @@
 					bottom:0;
 					left: rem(20px);
 					/*border: 1px solid red;*/
+					@include tablets() {
+						top:0;
+						right: rem(20px);
+						bottom: auto;
+						left:auto;
+					}
+					
 				}
 					.calorie__img{
 						margin: 0;

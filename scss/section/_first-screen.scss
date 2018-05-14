@@ -7,7 +7,6 @@
 		@include justify-content(center);
 		@include  align-items(center);
 		@include flex-direction(column);
-		
 	}
 	.header{
 		width: 100%;
@@ -27,7 +26,7 @@
 			@include flex;
 			@include flex-wrap(wrap);
 			list-style-type: none;
-			transition: all 0.3s;
+			transition: all .4s;
 			
 			@include tablets() {
 				position: fixed;
@@ -35,7 +34,7 @@
 				right:0;
 				bottom:0; 
 				left:0;
-				background: #000;
+				background: #2f3234;
 				z-index: 100;
 				align-items: center;
 				@include flex-direction(column);
@@ -156,9 +155,11 @@
 		.section__title-yellow{
 			color: $orange;
 			margin-bottom: rem(30px);
+			text-align: left;
 			
 			@include tablets() {
 				margin-bottom: rem(20px);
+				text-align: center;
 			}
 		}
 			
