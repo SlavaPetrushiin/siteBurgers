@@ -1,0 +1,160 @@
+.slider{
+	@include flex;
+	@include flex-direction(column);
+	@include justify-content(center);	
+	background: linear-gradient(to bottom, #f9b43b 25%, #eb8d38 65%, #f9b43b 100%);
+}
+
+	.container__slider{
+		position: relative;
+		/*border: 1px solid blue;*/
+		@include flex;
+		@include flex-direction(row);
+		@include align-items(stretch);
+		padding: rem(20px) 0;
+		
+			@include tablets() {
+				@include flex-direction(column);
+			}
+	}
+		.slaider__befor{
+			position: absolute;
+			top:44%;
+			left:0;
+			
+			@include tablets() {
+				top:42%;	
+			}
+		}
+			.befor__link-icon{
+				fill:$text_color;
+				transform: rotate(90deg);
+			}
+		.slaider__after{
+			position: absolute;
+			top:44%;
+			right:0;
+			
+			@include tablets() {
+				top:42%;	
+			}	
+		}
+			.after__link-icon{
+				fill:$text_color;
+				transform: rotate(-90deg);
+			}
+		.slaider__images{
+			@include flex;
+			@include flex-direction(column);
+			@include justify-content(center);
+			position: relative;
+			/*border: 1px solid green;*/
+			width: 46%;
+			
+			@include tablets() {
+				width: 96%;
+				@include align-items(center);
+				
+			}
+		}
+			.image__burger{
+				text-align: center;
+				width: rem(505px);
+				max-width: 100%;
+			}
+			.menu__burgers{
+				position: absolute;
+				top:0;
+				left: rem(20px);
+				/*border: 1px solid red;*/
+			}
+				.burger__link{
+					display: block;
+					text-decoration: none;
+				}
+					.burger__link-span{
+						text-align: center;
+						margin-top: rem(2px);
+						display: block;
+						color:$text_color;
+						font-family: 'GagalinRegular';
+						font-size: rem(14px);
+					}
+				.burger__link-icon{
+					fill:$text_color;
+				}
+				.calorie{
+					position: absolute;
+					bottom:0;
+					left: rem(20px);
+					/*border: 1px solid red;*/
+				}
+					.calorie__img{
+						margin: 0;
+					}
+						.calorie__block{
+							fill:$text_color;
+						}
+							.calorie__svg{
+								fill:$text_color;
+								font-size: rem(50px);
+								font-family: 'GagalinRegular';							
+							}
+							.calorie__text{
+								text-align: center;
+								margin-top: rem(2px);
+								display: block;
+								color:$text_color;
+								font-family: 'GagalinRegular';
+								font-size: rem(14px);
+							}
+		.slaider__composition{
+			/*border: 1px solid blue;*/
+			width: 46%;
+			color:$text_color;
+			
+			@include tablets() {
+				width:96%;
+				text-align: center;
+			}
+		}
+			.composition__title{
+				margin-bottom: rem(45px);	
+					
+				@include tablets() {
+					margin: rem(20px) 0;	
+				}				
+			}
+			.composition__burger{
+				line-height: 2;
+				margin-bottom: rem(30px);
+				font-size: rem(14px);
+			}
+			.composition__price{
+				@include flex;
+				@include align-items(center);
+				
+				@include tablets() {
+					@include justify-content(center);
+				}
+			}
+				.price__order{
+					font-size: rem(30px);
+					color:$red;
+					font-family: 'GagalinRegular';
+					margin-right: rem(24px);
+					
+					& span {
+						font-size: rem(72px);
+					}
+				}
+				.btn__slaider{
+					background-color: $red;
+					margin-top: 25px;
+
+					&:hover{
+						background-color: $btn_hover;
+					}
+				}
+
+

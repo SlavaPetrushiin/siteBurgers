@@ -20,17 +20,37 @@
 			margin-right: auto;
 		}
 			.logo__image{
-
+				position: relative;
+				z-index: 1001;
 			}
 		.header__menu{
 			@include flex;
 			@include flex-wrap(wrap);
 			list-style-type: none;
+			transition: all 0.3s;
+			
+			@include tablets() {
+				position: fixed;
+				top:0;
+				right:0;
+				bottom:0; 
+				left:0;
+				background: #000;
+				z-index: 100;
+				align-items: center;
+				@include flex-direction(column);
+				@include justify-content(center);
+				transform: translateX(-100%);
+			}
 		}
 			.menu__item{
-				margin-right: rem(10px);
+				margin-right: rem(20px);
+				position: relative;
 				
 				&::before{
+					position: absolute;
+					top: rem(1px);
+					left: rem(-13px);
 					display: inline-block;
 					vertical-align: middle;
 					color: $text_color; /* Цвет маркера */
@@ -40,6 +60,19 @@
 				&:hover{
 					color:$red;
 					transition: .5s;
+				}
+				
+				@include tablets() {
+					margin-right: 0;
+					margin-bottom: rem(40px);
+					width: rem(150px);
+					text-align: center;
+					
+					&::before{
+						top:rem(-35px);
+						left: rem(71px);
+						font-size: rem(24px);
+					}
 				}
 			}
 			.header__menu .menu__item:first-child:before{
@@ -51,6 +84,10 @@
 					text-transform: uppercase;
 					color:$text_color;
 					font-size: rem(13px);
+					
+					@include tablets() {
+						font-size: rem(24px);
+					}
 				}
 
 				.menu__link:hover{
@@ -64,6 +101,36 @@
 					background-color: $btn_hover;
 				}
 			}
+/*********************   Гамбургер меню     *********************/
+			.dropdown__menu{
+				display: none;
+				cursor: pointer;
+				margin-left: rem(25px);
+
+				@include tablets() {
+					display: block;
+				}			
+			}
+				.drop{
+					display: block;
+					width: rem(25px);
+					height: rem(5px);
+					background: $text_color;
+					margin-bottom: rem(4px);
+					border-radius: rem(2px);
+				}
+			.close{/***********КРЕСТИК**********/
+				z-index: 1001;
+				display: none;
+				
+				& a {
+					text-decoration: none;
+					text-transform: uppercase;
+					color:$text_color;
+					font-size: rem(24px);
+				}
+			}
+
 	.header__content{
 		@include flex;
 		@include flex-grow(1);
