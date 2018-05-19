@@ -17,11 +17,19 @@
 		}
 		.header__logo{
 			margin-right: auto;
+			width: rem(120px);
+			height: rem(120px);
 		}
-			.logo__image{
-				position: relative;
-				z-index: 1001;
+			.logo__link{
+				display: inline-block;
+				width: 100%;
+				height: 100%;
 			}
+				.logo__image{
+					max-width: 100%;
+					position: relative;
+					z-index: 1001;
+				}
 		.header__menu{
 			@include flex;
 			@include flex-wrap(wrap);

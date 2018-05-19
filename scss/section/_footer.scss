@@ -6,11 +6,24 @@
 	}
 }
 	.yandex-map{
-		background: url("../images/bg/map.jpg") center center / cover no-repeat; 
-		max-width: 100%;
 		height: 100%;
 		width: 100%;
 	}
+		.map__hint, .map__balloon{
+			width: auto;
+			height: rem(40px);
+			font-size: rem(14px);
+			background: orange;
+			color:#fff;
+			padding: rem(10px);
+			font-weight: 700;
+			border-radius: rem(5px);
+			@include flex;
+			@include  align-items(center);
+		}
+		.map__balloon{
+			background: brown;
+		}
 	.footer__information{
 		position: absolute;
 		height: rem(120px);
@@ -86,6 +99,9 @@
 					.socials__item{
 						margin-left: rem(18px);
 						@include  align-self(flex-start);
+					}
+					.socials__item:first-child{
+						margin-left: 0;
 					}
 					.socials__link{
 

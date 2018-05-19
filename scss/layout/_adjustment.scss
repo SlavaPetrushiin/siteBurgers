@@ -7,15 +7,15 @@
 	min-height: 100%;
 	overflow: hidden;
 	min-width: rem(320px);
-	
-	@include tablets() {
-		height: initial;
-	}
 }
 
 .maincontent{
 	height: 100%;
 	min-height:rem(650px);
+	
+	@include tablets() {
+		height: initial;
+	}
 }
 
 .section{
@@ -27,6 +27,7 @@
 	@include tablets() {
 			height: auto;
 			overflow: hidden;
+
 		}
 }
 
