@@ -31,6 +31,10 @@
 			.block__title {
 				color: #f9b43b;
 				margin-bottom: rem(25px);
+				
+				@include phones() {
+					text-align: center;
+				}
 			}
 			.accordeon{
 
@@ -43,13 +47,24 @@
 					.unit{
 						margin-bottom: rem(23px);
 					}
+					.unit__active{/**************АКТИВНЫЙ КЛАСС********************/
+						.unit__title{
+							color:$orange;
+							&::before{
+								transform: translateY(-50%) rotate(180deg);
+							}
+						}
+						.unit__information{
+							height: auto;
+						}
+					}
 
 						.unit__title {
 							text-transform: uppercase;
 							font-family: 'GagalinRegular';
 							text-decoration: none;
 							color:$text_color;
-							display: block;
+							display: inline-block;
 							position: relative;
 							padding-left: rem(15px);
 							transition: all easy .5s;
@@ -63,17 +78,10 @@
 									content: "";
 									display: block;
 									position: absolute;
-									left: rem(-18px);
-									top: rem(5px);
+									top:50%;
+									left: rem(-4px);
 									width: 0;
 									height: 0;
-									
-									@include tablets() {
-										left: rem(20px);
-									}
-									@include phones() {
-										font-size: rem(18px);
-									}
 								}
 
 								&:before {
@@ -81,7 +89,7 @@
 									border-left: rem(5px) solid transparent;
 									border-right: rem(5px) solid transparent;
 									border-bottom: rem(0px) solid transparent;
-									transform: rotate(0deg);
+									transform: translateY(-50%) rotate(0deg);
 									transition: .3s;
 								}
 
@@ -92,7 +100,9 @@
 									border-right: rem(5px) solid transparent;
 									border-top: rem(0px) solid transparent;
 								}
-
+								@include phones() {
+									font-size: rem(24px);
+								}
 							}
 							.unit__information {
 								@include flex;
@@ -107,10 +117,6 @@
 										@include flex-direction(column);
 									}
 							}
-								.unit__information-active{
-									height: auto;
-								}
-
 								.unit__foto {
 									 width: rem(100px);
 									 height: rem(100px);

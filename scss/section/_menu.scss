@@ -19,7 +19,15 @@
 		.nav__menu{
 			@include flex;
 		}
-		.nav__menu-active{
+		.nav__menu-active{/*************АКТИВНЫЙ КЛАСС*******************/
+			.nav__menu-acco{
+				&::before{
+					background: rgba(#2f3234, 0.95);
+				}
+			}
+			.nav__link{
+				color:$orange;
+			}
 			.nav__text{
 				display: block;
 			}
@@ -31,6 +39,17 @@
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;	
+				
+					&::before{
+						content: "";
+						display: block;
+						position: absolute;
+						top:0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: rgba(#2f3234, 0.8);
+					}
 			}
 				.nav__link{
 					display: block;
@@ -46,13 +65,14 @@
 					left:50%;
 					transform: rotateZ(-90deg) translateY(-50%);
 					transform-origin: 0 0;
+					transition: all 0.3s;
 					}
 					
 				.nav__text{
 					display: none;
 					position: relative;
 					height: 100%;
-					background: rgba(#2f3234, .93);
+					background: rgba(#000, .85);
 					max-width: 540px;
 					width: 100%;
 					overflow: hidden;

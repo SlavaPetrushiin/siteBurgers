@@ -16,6 +16,9 @@
 			@include tablets() {
 				@include flex-direction(column);
 			}
+			@include phones() {
+				height: 100%;
+			}
 	}
 		.slaider__befor{
 			position: absolute;
@@ -56,13 +59,17 @@
 			@include tablets() {
 				width: 96%;
 				@include align-items(center);
-				
 			}
 		}
 			.image__burger{
 				text-align: center;
 				width: rem(505px);
 				max-width: 98%;
+			
+				@include phones() {
+					width: 45%;
+					padding-top: rem(100px);
+				}				
 			}
 			.menu__burgers{
 				position: absolute;
@@ -158,6 +165,7 @@
 					color:$red;
 					font-family: 'GagalinRegular';
 					margin-right: rem(24px);
+					line-height: rem(25px);
 					
 					& span {
 						font-size: rem(72px);

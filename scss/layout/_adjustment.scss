@@ -6,6 +6,11 @@
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	min-width: rem(320px);
+	
+	@include tablets() {
+		height: initial;
+	}
 }
 
 .maincontent{
@@ -18,6 +23,7 @@
 	background-color: rgba(0,0,0,0.31);
 	min-height: rem(650px); 
 
+
 	@include tablets() {
 			height: auto;
 			overflow: hidden;
@@ -28,8 +34,9 @@
 	margin: 0 auto;
 	max-width: rem(940px);
 	width: 95%;
+	height: 100%;
 	/*border: 2px solid green;*/
-	padding: 0 rem(15px);
+	padding: 0 rem(10px);
 	@include flex;
 	@include justify-content(center);
 	@include  align-items(center);
