@@ -29,8 +29,6 @@ let gamburgerMenu = (function(){
 	}
 }());
 
-
-
 //*******СОСТАВ БУРГЕРОВ (slider)
 
 let ingridients = (function(){
@@ -50,6 +48,34 @@ let ingridients = (function(){
 		burger__dropdown.classList.remove('burger__dropdown-active');
 	}///ПОЧЕМУ НЕ УДАЛЯЕТ КЛАССССССССС??????????????????
 }());
+
+
+
+
+
+//********КОМАНДА**************
+
+let teamList = document.querySelector('.workers__unit');
+
+teamList.addEventListener('click', function(e){
+	e.preventDefault();
+	
+	let target = e.target;
+	//console.log(target);
+	let unit = target.closest('.unit');//поиск ближайщего родителя
+	let units = document.querySelectorAll('.unit');
+	
+	if (!unit.classList.contains('unit__active')) {
+		for (let i = 0; i<units.length; i++ ){
+			units[i].classList.remove('unit__active');
+		}
+		unit.classList.add('unit__active');
+	} else {
+		unit.classList.remove('unit__active');
+	}
+});
+
+
 
 
 
