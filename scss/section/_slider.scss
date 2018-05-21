@@ -5,9 +5,8 @@
 	background: linear-gradient(to bottom, #f9b43b 25%, #eb8d38 65%, #f9b43b 100%);
 }
 
-	.container__slider{
+	.slider__wrap{
 		position: relative;
-		/*border: 1px solid blue;*/
 		@include flex;
 		@include flex-direction(row);
 		@include align-items(stretch);
@@ -48,136 +47,217 @@
 				fill:$text_color;
 				transform: rotate(-90deg);
 			}
-		.slaider__images{
+		.slaider__item{
 			@include flex;
-			@include flex-direction(column);
-			@include justify-content(center);
-			position: relative;
-			/*border: 1px solid green;*/
-			width: 46%;
+			@include flex-direction(row);
 			
-			@include tablets() {
-				width: 96%;
-				@include align-items(center);
-			}
+				@include tablets() {
+					@include flex-direction(column);
+				}
 		}
-			.image__burger{
-				text-align: center;
-				width: rem(505px);
-				max-width: 98%;
-			
-				@include phones() {
-					width: 45%;
-					padding-top: rem(100px);
-				}				
-			}
-			.menu__burgers{
-				position: absolute;
-				top:0;
-				left: rem(20px);
-				width: rem(90px);
-				height: rem(90px);
-				background: #f08c33;
-				border-radius: rem(4px);
+			.slaider__images{
 				@include flex;
-				@include align-items(center);
+				@include flex-direction(column);
 				@include justify-content(center);
+				position: relative;
+				/*border: 1px solid green;*/
+				width: 46%;
+
+				@include tablets() {
+					width:100%;
+					@include align-items(center);
+				}
 			}
-				.burger__link{
-					display: block;
-					text-decoration: none;
+				.image__burger{
+					text-align: center;
+					width: rem(505px);
+					max-width: 98%;
+
+					@include phones() {
+						width: 45%;
+						padding-top: rem(100px);
+					}				
 				}
-					.burger__link-span{
-						text-align: center;
-						margin-top: rem(2px);
-						display: block;
-						color:$text_color;
-						font-family: 'GagalinRegular';
-						font-size: rem(14px);
-					}
-				.burger__link-icon{
-					fill:$text_color;
-				}
-				.calorie{
+				.menu__burgers{
 					position: absolute;
-					bottom:0;
+					top:0;
 					left: rem(20px);
-					/*border: 1px solid red;*/
-					@include tablets() {
-						top:0;
-						right: rem(20px);
-						bottom: auto;
-						left:auto;
-					}
-					
-				}
-					.calorie__img{
-						margin: 0;
-					}
-						.calorie__block{
-							fill:$text_color;
-						}
-							.calorie__svg{
-								fill:$text_color;
-								font-size: rem(50px);
-								font-family: 'GagalinRegular';							
-							}
-							.calorie__text{
-								text-align: center;
-								margin-top: rem(2px);
-								display: block;
-								color:$text_color;
-								font-family: 'GagalinRegular';
-								font-size: rem(14px);
-							}
-		.slaider__composition{
-			/*border: 1px solid blue;*/
-			width: 46%;
-			color:$text_color;
-			
-			@include tablets() {
-				width:96%;
-				text-align: center;
-			}
-		}
-			.composition__title{
-				margin-bottom: rem(45px);	
-					
-				@include tablets() {
-					margin: rem(20px) 0;	
-				}				
-			}
-			.composition__burger{
-				line-height: 2;
-				margin-bottom: rem(30px);
-				font-size: rem(14px);
-			}
-			.composition__price{
-				@include flex;
-				@include align-items(center);
-				
-				@include tablets() {
+					width: rem(90px);
+					height: rem(90px);
+					background: #f08c33;
+					border-radius: rem(8px);
+					@include flex;
+					@include align-items(center);
 					@include justify-content(center);
 				}
-			}
-				.price__order{
-					font-size: rem(30px);
-					color:$red;
-					font-family: 'GagalinRegular';
-					margin-right: rem(24px);
-					line-height: rem(25px);
-					
-					& span {
-						font-size: rem(72px);
+					.burger__link-image{
+						@include flex;
+						@include align-items(center);
+						@include flex-direction(column);
+						cursor:pointer;
+						width: 100%;
+						height: auto;
 					}
-				}
-				.btn__slaider{
-					background-color: $red;
-					margin-top: 25px;
+						.burger__link-icon{
+							fill:$text_color;
+							
+						}
+						.burger__link-text{
+							text-align: center;
+							margin-top: rem(2px);
+							color:$text_color;
+							font-family: 'GagalinRegular';
+							font-size: rem(14px);
+						}
+/*************************Выиадающие меню********************/
+						.burger__dropdown{
+							position: absolute;
+							background: rgba(255, 255, 255, 0.9);
+							border-radius: rem(8px);
+							left:rem(-99999px);
+							top:0;
+							opacity: 0;
+							transition: opacity 0.3s;
+							z-index: 10;
+							padding: rem(20px);
+						}
+							.burger__dropdown-row{
+								@include flex;	
+								@include align-items(center);
+								margin-bottom: rem(10px);
+								
+								&:last-child{
+									margin-bottom: 0;
+								}
+							}
+								.urger__dropdown-ingredient{
+									font-size: rem(12px);
+									margin-left: rem(20px);
+									flex-grow: 1;
+									
+									&:first-child{
+										width: rem(48px);
+										height: rem(43px);
+										font-size: 0;
+										margin-left: 0;
+									}
+									&:last-child{
+										text-align: right;
+									}
+								}
+						.burger__dropdown-close{
+							color: red;
+							position: absolute;
+							top:rem(4px);
+							left: rem(266px);
+							font-size: rem(24px);
+							font-weight: bold;
+							z-index: 100;
+							display: none;
+						}
 
-					&:hover{
-						background-color: $btn_hover;
+						.burger__dropdown-active{/*АКТИВНОЕ МЕНЮ*/
+							
+							.burger__dropdown{
+								left:100%;
+								opacity: 1;	
+							}
+							.burger__dropdown-close{
+								display: block;
+							}
+						}
+/*---------------------*/
+					.calorie{
+						position: absolute;
+						width: rem(60px);
+						height: rem(90px);
+						bottom:0;
+						left: rem(20px);
+						
+						@include tablets() {
+							top:0;
+							right: rem(20px);
+							bottom: auto;
+							left:auto;
+						}
+
+					}
+						.calorie__img{
+							margin: 0;
+							width: 100%;
+							@include flex;
+							@include align-items(center);
+							@include flex-direction(column);
+						}
+							.calorie__block{
+								fill:$text_color;
+								max-width: 100%;
+							}
+								.calorie__svg{
+									fill:$text_color;
+									font-size: rem(50px);
+									font-family: 'GagalinRegular';							
+								}
+								.calorie__text{
+									text-align: center;
+									margin-top: rem(2px);
+									display: block;
+									color:$text_color;
+									font-family: 'GagalinRegular';
+									font-size: rem(14px);
+								}
+			.slaider__composition{/*************БЛОК ОПИСАНИЯ********************/
+				/*border: 1px solid blue;*/
+				width: 46%;
+				color:$text_color;
+				@include flex;
+				@include flex-direction(column);
+				@include align-items(flex-start);
+
+				@include tablets() {
+					width:100%;
+					text-align: center;
+					@include align-items(center);
+				}
+			}
+				.composition__title{
+					margin-bottom: rem(45px);	
+
+					@include tablets() {
+						margin: rem(20px) 0;	
+					}				
+				}
+				.composition__burger{
+					line-height: 2;
+					margin-bottom: rem(30px);
+					font-size: rem(14px);
+				}
+				.composition__price{
+					@include flex;
+					@include align-items(center);
+
+					@include tablets() {
+						@include justify-content(center);
 					}
 				}
+					.price__order{
+						font-size: rem(30px);
+						color:$red;
+						font-family: 'GagalinRegular';
+						margin-right: rem(24px);
+						line-height: rem(25px);
+
+						& span {
+							font-size: rem(72px);
+						}
+					}
+					.btn__slaider{
+						background-color: $red;
+						margin-top: 25px;
+
+						&:hover{
+							background-color: $btn_hover;
+						}
+					}
 
 

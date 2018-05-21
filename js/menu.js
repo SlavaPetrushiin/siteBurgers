@@ -1,31 +1,60 @@
-var dropdown__menu = document.querySelector(".dropdown__menu");
-var close = document.querySelector(".close");
-var btn = document.querySelector(".header__btn");
-var header__menu = document.querySelector(".header__menu");
-
-dropdown__menu.addEventListener('click', menuShow) ;//нажатие гамбургера
-close.onclick = menuHide;//закрытие меню
-header__menu.addEventListener('click', function(e){
-	let target = e.target;
-	if(target.className === "menu__link"){
-		menuHide();
-	}	
-})
-function menuShow(){
+//*******БУРГЕР МЕНЮ
+let gamburgerMenu = (function(){
 	
-	header__menu.style.transform = 'translateX(0%)';
-	
-	close.style.display = 'block';
-	dropdown__menu.style.display = 'none';
-	btn.style.display = 'none';
-}
+	let dropdown__menu = document.querySelector(".dropdown__menu");
+	let close = document.querySelector(".close");
+	let header__menu = document.querySelector(".header__menu");
 
-function menuHide(){
-	header__menu.style.transform = 'translateX(-100%)';
-	close.style.display = 'none';
-	btn.style.display = 'block';
-	document.querySelector('.dropdown__menu').style.display = 'block';
-}
+	dropdown__menu.addEventListener('click', menuShow) ;//нажатие гамбургера
+	close.addEventListener('click', menuHide);//закрытие меню
+
+	header__menu.addEventListener('click', function(e){
+		let target = e.target;
+		if(target.className === "menu__link"){
+			menuHide();
+		}	
+	})
+	function menuShow(){
+		document.body.classList.add('body__active-menu');
+		document.querySelector('.header').classList.add('header__menu-active');
+	}
+
+	function menuHide(){
+		document.body.classList.remove('body__active-menu');
+		document.querySelector('.header').classList.remove('header__menu-active');
+	}
+	return {
+		open: 'dropdown__menu',
+		close: 'close'
+	}
+}());
+
+
+
+//*******СОСТАВ БУРГЕРОВ (slider)
+
+let ingridients = (function(){
+	
+	var burger__dropdown = document.querySelector('.burger__link-image');
+	var burger__close = document.querySelector('.burger__dropdown-close');
+	
+	burger__dropdown.addEventListener('click', burgerShow);
+	burger__close.addEventListener('click', burgerHide);
+	
+	
+	function burgerShow(){
+		burger__dropdown.classList.add('burger__dropdown-active');
+	}
+	function burgerHide(){
+		console.log(burger__dropdown);
+		burger__dropdown.classList.remove('burger__dropdown-active');
+	}///ПОЧЕМУ НЕ УДАЛЯЕТ КЛАССССССССС??????????????????
+}());
+
+
+
+
+
 
 
 

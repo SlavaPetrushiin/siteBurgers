@@ -138,6 +138,23 @@
 				}
 			}
 
+/**************АКТИВНОЕ МЕНЮ**************************/
+.header__menu-active{
+	.header__menu{
+		transform:translateX(0%);
+	}
+	.dropdown__menu{
+		display: none;
+	}
+	.close{
+		display: block;
+	}
+	.header__btn{
+		display: none;
+	}
+}
+/********************************************************/
+
 	.header__content{
 		@include flex;
 		@include flex-grow(1);
