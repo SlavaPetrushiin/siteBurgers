@@ -29,6 +29,7 @@ let gamburgerMenu = (function(){
 	}
 }());
 
+
 //*******СОСТАВ БУРГЕРОВ (slider)
 
 let ingridients = (function(){
@@ -50,33 +51,62 @@ let ingridients = (function(){
 }());
 
 
-
-
-
 //********КОМАНДА**************
 
-let teamList = document.querySelector('.workers__unit');
+let team = (function(){
+	let teamList = document.querySelector('.workers__unit');
+	teamList.addEventListener('click', function(e){
+		e.preventDefault();
 
-teamList.addEventListener('click', function(e){
+		let target = e.target;
+		//console.log(target);
+		let unit = target.closest('.unit');//поиск ближайщего родителя
+		let units = document.querySelectorAll('.unit');
+
+		if (!unit.classList.contains('unit__active')) {
+			for (let i = 0; i<units.length; i++ ){
+				units[i].classList.remove('unit__active');
+			}
+			unit.classList.add('unit__active');
+		} else {
+			unit.classList.remove('unit__active');
+		}
+	});	
+}());
+
+
+//*******ВЕРТИКАЛЬНОЕ МЕНЮ
+
+var verticallyMenu = document.querySelector('.nav');
+verticallyMenu.addEventListener('click', function(e){
 	e.preventDefault();
 	
 	let target = e.target;
-	//console.log(target);
-	let unit = target.closest('.unit');//поиск ближайщего родителя
-	let units = document.querySelectorAll('.unit');
+	console.log(target);
+	let nav__menu = target.closest('.nav__menu');
+	console.log(nav__menu);
+	let navs = document.querySelectorAll('.nav__menu');
 	
-	if (!unit.classList.contains('unit__active')) {
-		for (let i = 0; i<units.length; i++ ){
-			units[i].classList.remove('unit__active');
+		if (!nav__menu.classList.contains('nav__menu-active')){
+			for (var i=0; i<navs.length; i++){
+				navs[i].classList.remove('nav__menu-active');
+			}
+			nav__menu.classList.add('nav__menu-active');
+		} else {
+			nav__menu.classList.remove('nav__menu-active');
 		}
-		unit.classList.add('unit__active');
-	} else {
-		unit.classList.remove('unit__active');
-	}
 });
 
-
-
+//let calculateWidth = () =>{  
+	//let windowWidth = $(window).width();
+	//let links = $(".nav__menu");
+	//let linksWidth = links.width();
+	
+	//let reqWidth = windowWidth - linksWidth * links.length;
+	
+	//return reqWidth > 550 ? 550 : reqWidth;
+//}
+//console.log(reqWidth);
 
 
 
@@ -155,7 +185,34 @@ function init(){
 	//myMap.geoObjects.add(placeSelyatino);
 	cluster.add(geoObjects);
 }
-					   
+	
+
+
+
+//***********************СКРОЛ  СКРОЛ
+const section = $('.section');
+const display = $('.maincontent');
+
+const preformTransition = sectionEq =>{
+	const position = '${-sectionEq*100}%';
+	
+	display.css({
+		transform: 'translateY(${position})'
+	});
+};
+
+$(document).on('wheel', e => {
+	const deltaY  = e.originalEvent.deltaY;
+	
+	if (deltaY > 0){
+		preformTransition(2);
+	}
+	if(deltaY < 0){
+		console.log("up");
+	}
+});
+
+
 
 
 
