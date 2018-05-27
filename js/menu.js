@@ -37,7 +37,8 @@ let ingridients = (function(){
 	var burger__dropdown = document.querySelector('.burger__link-image');
 	var burger__close = document.querySelector('.burger__dropdown-close');
 	
-	burger__dropdown.addEventListener('click', burgerShow);
+	burger__dropdown.addEventListener('mouseenter', burgerShow);
+	burger__dropdown.addEventListener('mouseleave', burgerHide);
 	burger__close.addEventListener('click', burgerHide);
 	
 	
@@ -110,9 +111,33 @@ verticallyMenu.addEventListener('click', function(e){
 
 
 
+//*******************************ОБРАБОТКА ФОРМЫ!!!!!!!!!!!!!!!!!!!
 
 
+//$('#order-form').on('submit', submitForm);
+	//function submitForm(e){
+		//e.preventDefault();
+		
+		//var form = $(e.target),
+		//	var request = submitForm;
+		
+		//request.fail(function(jqXHR, textStatus){
+		//	alert("Request failed: " + textStatus);
+		//});
+	//};
 
+//Уневерсальная функция 
+	//function submitForm(form){
+	//	var data = form.serialize();
+	//		url = form.attr('action');
+	//	
+	//	return $.ajax({
+	//		type: 'POST',
+	//		url: url,
+	//		data: data,
+	//		dataType: 'JSON'
+	//	});
+	//};
 
 //**************************КАРТА***********************************
 ymaps.ready(init);
@@ -187,30 +212,131 @@ function init(){
 }
 	
 
+//КАРУСЕЛЬ
+//$(document).ready(function(){
+  //$(".slader__list").owlCarousel({
+   //  items: 1,
+	// center:true,
+    // autoplay: true,
+    // autoplayHoverPause: true,
+   //  loop: true,
+	// navigation: true,
+   //  navText: ['prev', 'next']
+    
+  //});
+//});
+
+
 
 
 //***********************СКРОЛ  СКРОЛ
-const section = $('.section');
+const sections = $('.section');
 const display = $('.maincontent');
+let inScroll = false;
+const  mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile =  mobileDetect.mobile();
+
+setActiveMenuItem = itemEq =>{
+	$(".site__item")
+		.eq(itemEq)
+		.addClass("active")
+		.siblings()
+		.removeClass("active");
+}
 
 const preformTransition = sectionEq =>{
-	const position = '${-sectionEq*100}%';
+	const position = `${-sectionEq*100}%`;
 	
-	display.css({
-		transform: 'translateY(${position})'
-	});
+	if(inScroll===false){
+		
+		inScroll = true;
+		
+		sections
+			.eq(sectionEq)
+			.addClass('section-active')
+			.siblings()
+			.removeClass('section-active');
+
+		display.css({
+			transform: `translateY(${position})`,
+			'-webkit-transform':`translateY(${position})`
+		});		
+	}
+	
+	const transitionDuraction = parseInt(display.css('transition-duraction')) * 1000; //время в мс
+	
+	setTimeout(() => {
+		inScroll = false;
+		setActiveMenuItem(sectionEq);
+	}, transitionDuraction + 300);// за 300 мс проходит код
+
 };
 
-$(document).on('wheel', e => {
-	const deltaY  = e.originalEvent.deltaY;
+const scrollToSection = direction =>{
+	const activeSection = sections.filter('.section-active');
+	const nextSection =  activeSection.next();
+	const prexSection = activeSection.prev();
 	
-	if (deltaY > 0){
-		preformTransition(2);
+	if(direction === "up" && prexSection.length){
+		preformTransition(prexSection.index());
 	}
-	if(deltaY < 0){
-		console.log("up");
+	if (direction === "down" && nextSection.length){
+		preformTransition(nextSection.index());
 	}
+}
+
+$(document).on({
+	wheel:  e => {
+		const deltaY  = e.originalEvent.deltaY;
+		const direction = deltaY > 0 ? 'down' : 'up';
+
+		scrollToSection(direction);
+		
+	},
+	keydown: e =>{
+
+		switch(e.keyCode){
+			case 40:
+				scrollToSection("down");
+				break;
+			case 38:
+				scrollToSection("up");
+				break;	
+		};
+	},
+	touchmove: e => e.preventDefault()
 });
+
+$('[data-scroll-to]').on("click", e => {
+	e.preventDefault();
+	
+	const target = parseInt($(e.currentTarget).attr('data-scroll-to'));
+	
+	preformTransition(target);
+	console.log(target);
+})
+
+if (isMobile){
+	$(document).swipe({
+		//Generic swipe handler for all directions
+		swipe:function(
+			event, 
+			direction, 
+			distance, 
+			duration, 
+			fingerCount,
+			fingerData
+		) {
+			const swipeDirection = direction === 'down' ? 'up' : 'down';
+
+			scrollToSection(swipeDirection);	
+		}
+	});	
+}
+
+
+
+
 
 
 

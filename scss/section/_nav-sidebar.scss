@@ -34,7 +34,9 @@
 		opacity: 0;	
 	}
 }
-.site__item:hover::after{
-	opacity: 1;
+.active{
+	&::after{
+		opacity: 1;
+	}
 }
 

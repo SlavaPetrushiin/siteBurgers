@@ -14,31 +14,29 @@
 	  height: 100%;
 	  @include flex;
 	  @include flex-direction(column);
-	  @include  align-items(center);
-	  @include justify-content(center);
+	  @include  align-items(flex-start);
+	  @include justify-content(flex-start);
 	  @include flex-wrap(nowrap);
 	  background: rgba(#2f3234, 0.80);
+	  padding: 5% 5%;
+	
 		
 		@include tablets() {
 				width: 100%;
+				@include  align-items(center);
+	  			@include justify-content(center);
 			}
 	}
 
-		.block {
-		 /*border: 1px solid green;*/
-		 padding: rem(8px); }
-
-			.block__title {
+			.team__block .section__title {
 				color: #f9b43b;
-				margin-bottom: rem(25px);
+				margin-bottom: rem(70px);
 				
 				@include phones() {
 					text-align: center;
 				}
 			}
-			.accordeon{
 
-			}
 				.workers__unit{
 					@include tablets() {
 						text-align: center;
