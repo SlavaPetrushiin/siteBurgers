@@ -50,6 +50,6 @@
 			$data['status'] =  "NO";
 			$data['mes'] =  "Письмо не отправлено, ошибка на сервере";
 		};
-		echo json_encode($data);	
+		echo json_encode($data);
 
 ?>

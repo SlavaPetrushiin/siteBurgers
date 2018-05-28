@@ -112,32 +112,58 @@ verticallyMenu.addEventListener('click', function(e){
 
 
 //*******************************ОБРАБОТКА ФОРМЫ!!!!!!!!!!!!!!!!!!!
-
-
-//$('#order-form').on('submit', submitForm);
-	//function submitForm(e){
-		//e.preventDefault();
-		
-		//var form = $(e.target),
-		//	var request = submitForm;
-		
-		//request.fail(function(jqXHR, textStatus){
-		//	alert("Request failed: " + textStatus);
-		//});
-	//};
-
 //Уневерсальная функция 
-	//function submitForm(form){
-	//	var data = form.serialize();
-	//		url = form.attr('action');
-	//	
-	//	return $.ajax({
-	//		type: 'POST',
-	//		url: url,
-	//		data: data,
-	//		dataType: 'JSON'
-	//	});
-	//};
+	function ajaxForm(form){
+		var data = form.serialize();
+			url = form.attr('action');
+		return $.ajax({
+			type: 'POST',
+			url: url,
+			data: data,
+			dataType: 'JSON'
+		});
+	};
+
+$('#order-form').on('submit', submitForm);
+	function submitForm(e){
+		e.preventDefault();
+		
+		var form = $(e.target),
+			request = ajaxForm(form);
+		
+		request.fail(function(jqXHR, textStatus){
+			alert("Request failed: " + textStatus);
+		});
+		
+		//request.done(function(msg){
+			
+			//var popupBlock = $('.popup');
+			//var popup = $('.popup__text');
+			//var popupClose = $('.popup__close');
+			
+			//var mes = msg.mes,
+				///status = msg.status;
+			//alert(mes);
+			//if (status === 'OK'){
+				//popupBlock.css("display", "block");
+				//popup.text(mes);
+				//alert(mes);
+		//	} else  {
+				//popupBlock.css("display", "block");
+				//popup.text(mes);
+		//	}
+
+			
+		//});
+	};
+
+
+
+	$(".btn__input_reset").click(function(){	//ОЧИСТКА ФОРМЫ
+		$(this).closest('#order-form').find("input[type=text]").val(" ");
+	});
+
+
 
 //**************************КАРТА***********************************
 ymaps.ready(init);
@@ -318,7 +344,6 @@ $('[data-scroll-to]').on("click", e => {
 
 if (isMobile){
 	$(document).swipe({
-		//Generic swipe handler for all directions
 		swipe:function(
 			event, 
 			direction, 
