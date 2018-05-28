@@ -240,17 +240,17 @@ function init(){
 
 //КАРУСЕЛЬ
 //$(document).ready(function(){
-  //$(".slader__list").owlCarousel({
-   //  items: 1,
-	// center:true,
-    // autoplay: true,
-    // autoplayHoverPause: true,
-   //  loop: true,
-	// navigation: true,
-   //  navText: ['prev', 'next']
+  $(".slader__list").owlCarousel({
+     items: 1,
+	 center:true,
+     autoplay: true,
+     autoplayHoverPause: true,
+     loop: true,
+	 navigation: true,
+     navText: ['prev', 'next']
     
-  //});
-//});
+  });
+
 
 
 
