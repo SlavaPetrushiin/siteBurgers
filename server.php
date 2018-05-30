@@ -31,6 +31,7 @@
 				<li>Этаж ' . $floor . '</li>
 				<li>Квартира: ' . $part . '</li>
 				<li>Нужен ли звонок клиенту: ' . $callback . '</li>
+				<li>' . $pay  . '</li>
 			</ul>
 		</body>
 		</html>';
@@ -43,13 +44,7 @@
 		
 		$data = [];
 
-		if ($mail){
-			$data['status'] =  "OK";
-			$data['mes'] =  "Письмо успешно отправлено";
-		} else {
-			$data['status'] =  "NO";
-			$data['mes'] =  "Письмо не отправлено, ошибка на сервере";
-		};
+		$mail ? $data['status'] = true :  $data['status'] = false;
 		echo json_encode($data);	
 
 ?>

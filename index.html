@@ -117,7 +117,7 @@
 									</svg>
 								</a>						
 							</div>
-						<ul class="slader__list owl-carousel owl-theme"><!--owl-carousel owl-theme-->
+						<ul class="slader__list owl-carousel owl-theme">
 							<li class="slaider__item">
 								<div class="slaider__images">
 									<div class="menu__burgers">
@@ -510,11 +510,11 @@
 								</div>
 								<div class="order__row">
 									<label class="order__form-block">
-										<input type="radio" class="order__form-radio" name="pay">
+										<input type="radio" class="order__form-radio" name="pay" value="Потребуется сдача">
 										<div class="order__radio">Потребуется сдача</div>
 									</label>
 									<label class="order__form-block">
-										<input type="radio" class="order__form-radio" name="pay">
+										<input type="radio" class="order__form-radio" name="pay" value="Оплата по карте">
 										<div class="order__radio">Оплата по карте</div>
 									</label>									
 								</div>
@@ -536,10 +536,14 @@
 						</div>
 					</form>
 				</div>
-				<!--<div class="popup">
+				<div class="form__boxs succses" id="succses">
 					<a href="#" class="popup__close">X</a>
-					<div class="popup__text"></div>
-				</div>-->
+					<div class="popup__text">Сообщение отправлено</div>
+				</div>
+				<div class="form__boxs error" id="error">
+					<a href="#" class="popup__close">X</a>
+					<div class="popup__text">Сбой на сервере</div>
+				</div>
 			</div>
 			<div class="section footer">
 				<div class="yandex-map" id="map"></div>

@@ -122,28 +122,38 @@
 }
 
 /*ВСПЛЫВАЮЩЕЕ ОКНО*/
-.popup{
+.form__boxs{
 	position:absolute;
 	top:50%;
 	left:50%;
-	width: rem(300px);
-	background-color: rgba(255, 165, 0, 0.7);
+	width: rem(230px);
+	background-color: rgba(255, 165, 0, 0.9);
 	margin-top: rem(-100px);
 	margin-left: rem(-150px);
 	border-radius: rem(10px);
-	@include flex;
-	@include align-items(center);
-	@include justify-content(center);
-	height:200px;
+	height:100px;
 	transition: all .5s;
-	display: none;
 }
+		.succses{
+			display: none;
+		}
+		.error{
+			display: none;
+			background-color: rgba(201, 162, 0, 0.9);
+		}
+
+		.popup__text{
+			color:#fff;
+			font-weight: 500;
+			margin-top: rem(40px);
+    		text-align: center;
+		}
 	.popup__close{
 		text-decoration: none;
 		position: absolute;
 		content: "X";
-		top:rem(20px);
-		right: rem(15px);
+		top:rem(15px);
+		right: rem(12px);
 		font-size: rem(20px);
 		color: red;
 		font-weight: 600;

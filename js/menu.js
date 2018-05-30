@@ -131,30 +131,30 @@ $('#order-form').on('submit', submitForm);
 		var form = $(e.target),
 			request = ajaxForm(form);
 		
-		request.fail(function(jqXHR, textStatus){
-			alert("Request failed: " + textStatus);
+		request.done(function(msg){
+			const popup = msg.status;
+			
+			if (popup === "tru"){
+				$(".error").css('display', 'block');
+			} else {
+				$(".succses").css('display', 'block');
+			}
+				
+			console.log(popup);
 		});
 		
-		//request.done(function(msg){
-			
-			//var popupBlock = $('.popup');
-			//var popup = $('.popup__text');
-			//var popupClose = $('.popup__close');
-			
-			//var mes = msg.mes,
-				///status = msg.status;
-			//alert(mes);
-			//if (status === 'OK'){
-				//popupBlock.css("display", "block");
-				//popup.text(mes);
-				//alert(mes);
-		//	} else  {
-				//popupBlock.css("display", "block");
-				//popup.text(mes);
-		//	}
+		var popup__close = $(".popup__close");
+		popup__close.click(function(e){
+			e.preventDefault();
+			$(".succses").css('display', 'none');
+			$(".error").css('display', 'none');			
+		}); 
 
-			
-		//});
+		
+		
+		request.fail(function(jqXHR, textStatus){
+			$(".error").css('display', 'block');
+		});
 	};
 
 
